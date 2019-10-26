@@ -36,8 +36,6 @@ object SparkCassandra {
       var df = spark.sql(tableQuery)
       var tableName = p.replace(":", "_").replaceAll("\\<", "").replaceAll("\\>", "")
       df.createOrReplaceTempView(tableName)
-      println("Table Name: " + tableName)
-      df.show(10)
     })
 
     val queryST = System.currentTimeMillis()
