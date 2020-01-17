@@ -156,7 +156,7 @@ object SparkHBase extends Serializable {
     Logger.getLogger("org").setLevel(Level.ERROR)
     val config = new SparkConf()
     config.setAppName("HBaseSpark-Reader")
-      .setMaster("local[*]")
+    // .setMaster("local[*]")
     val sc = new SparkContext(config)
 
     val sqlContext = new org.apache.spark.sql.SQLContext(sc)
