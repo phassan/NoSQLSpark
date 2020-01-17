@@ -22,6 +22,7 @@ object SparkHBase extends Serializable {
                  ub_name: Option[String], ub_researchInterest: Option[String], ub_subOrganizationOf: Option[String],
                  ub_teachingAssistantOf: Option[String], ub_telephone: Option[String],
                  ub_undergraduateDegreeFrom: Option[String], ub_worksFor: Option[String])
+  // Adding a new outer scope to this context that can be used when instantiating an inner class during deserialization.
   org.apache.spark.sql.catalyst.encoders.OuterScopes.addOuterScope(this)
 
   object Row extends Serializable {
